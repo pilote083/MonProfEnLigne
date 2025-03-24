@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Anglais auxiliaire do</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="QcmSimple.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header id="accueil">
+			<div class="logo">Mon site</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="main.html">Accueil</a></li>
+					<li><a href="baseAnglais.html">Les bases en Anglais</a></li>
+					<li><a href="QcmSimple.html">L'auxiliaire "do" au Présent en Anglais</a></li>
+				</ul>
+			</nav>
+			<div class="menu-burger" onclick="toggleMenu()">≡</div>
+		</header>
+		<h1>L'utilisation de l'auxiliaire 'do' au présent en Anglais</h1>
+		<p id="entracte"><strong>L'auxiliaire 'do' est utilisé en anglais pour former les questions, les négations et pour insister sur une action.</strong></p>
+		<p>
+			<div id="liste">
+				<h2>Négation</h2>
+				<ul id="pre1">
+					<li>I => do => not => <strong>(I don't)</strong></li>
+					<li>You => do => not => <strong>(You don't)</strong></li>
+					<li>He/She/It => does => not => <strong>(He/She/It doesn't)</strong></li>
+					<li>You => do => not => <strong>(You don't)</strong></li>
+					<li>We => do => not => <strong>(We don't)</strong></li>
+					<li>They => do => not => <strong>(They don't)</strong></li>
+				</ul>
+				<p id="bouh"></p>
+			</div>
+			<div id="liste">
+				<h2>Question</h2>
+				<ul id="pre1">
+					<li>Auxiliaire => sujet => verbe => <strong>(Auxiliaire + sujet + verbe)</strong></li>
+					<li>Do => I => verbe => <strong>(Do I + verbe)</strong></li>
+					<li>Do => you => verbe => <strong>(Do you + verbe)</strong></li>
+					<li>Does => He/She/It => verbe => <strong>(Does he/she/it + verbe)</strong></li>
+					<li>Do => you => verbe => <strong>(Do you + verbe)</strong></li>
+					<li>Do => we => verbe => <strong>(Do we + verbe)</strong></li>
+					<li>Do => they => verbe => <strong>(Do they + verbe)</strong></li>
+				</ul>
+				<p id="bouh1"></p>
+			</div>
+			<div id="liste">
+				<h2>Question négative</h2>
+				<ul id="pre1">
+					<li>Auxiliaire => sujet => verbe => <strong>(Auxiliaire + sujet + verbe)</strong></li>
+					<li>Don't => I => verbe => <strong>(Don't I + verbe)</strong></li>
+					<li>Don't => you => verbe => <strong>(Don't you + verbe)</strong></li>
+					<li>Doesn't => He/She/It => verbe => <strong>(Doesn't He/She/It + verbe)</strong></li>
+					<li>Don't => you => verbe => <strong>(Don't you + verbe)</strong></li>
+					<li>Don't => we => verbe => <strong>(Don't we + verbe)</strong></li>
+					<li>Don't => they => verbe => <strong>(Don't they + verbe)</strong></li>
+				</ul>
+				<p id="bouh2"></p>
+			</div>
+		</p>
+		<div id="division">
+			<h3>L'auxiliaire 'do' dans les questions</h3>
+			<p id="para1">
+				On utilise 'do' ou 'does' au début de la phrase pour poser une question à tous les temps simples du présent et du passé.<br>
+				<strong>Auxiliaire + Sujet + Verbe </strong><br>
+				Exemples:<br>
+				<strong>-Do you like pizza?</strong> (Aimes-tu la pizza?)<br>
+				<strong>-Does she play tennis?</strong> (Joue-t-elle au tennis?)<br>
+				<strong>-Does he work on Saturdays? </strong>(Travaille-t-il les samedis?)<br>
+			</p>
+			<p id="bouh3"></p>
+		</div>
+		<div id="division">
+			<h3>L'auxiliaire 'do' dans les phrases négatives</h3>
+			<p id="para2">
+				On ajoute 'do not' <strong>(don't)</strong> ou 'does not' <strong>(doesn't)</strong> pour faire une négation.<br>
+				Exemples: <br>
+				-I do not like vegetables => <strong>I don't like vegetables. </strong>(Je n'aime pas les légumes.)<br>
+				-He does not understand => <strong>He doesn't understand.</strong> (Il ne comprend pas.)<br>
+				-She does not like red meat => <strong>She doesn't like red meat. </strong>(Elle n'aime pas la viande rouge)<br>
+			</p>
+			<p id="bouh4"></p>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">1-Quelle est la forme correcte pour une question en anglais ?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer1" value="a">You do like pizza?</label><br>
+					<label><input type="radio" name="answer1" value="b" >Do you like pizza?</label><br>
+					<label><input type="radio" name="answer1" value="c">Likes you pizza?</label><br>
+					<label><input type="radio" name="answer1" value="d">You likes pizza?</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse1()">Valider</button>
+			</form>
+			<div class="resultat1" id="resultat1"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">2-Quelle phrase est correcte?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer2" value="e">He don't likes apples.</label><br>
+					<label><input type="radio" name="answer2" value="f">He doesn't like apples.</label><br>
+					<label><input type="radio" name="answer2" value="g">He does likes apples.</label><br>
+					<label><input type="radio" name="answer2" value="h">He do likes apples.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse2()">Valider</button>
+			</form>
+			<div class="resultat2" id="resultat2"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">3-Comment dit-on 'Je n'aime pas le café' en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer3" value="i">I don't like coffee.</label><br>
+					<label><input type="radio" name="answer3" value="j">I doesn't like coffee.</label><br>
+					<label><input type="radio" name="answer3" value="k">I didn't like coffee.</label><br>
+					<label><input type="radio" name="answer3" value="l">I do like coffee.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse3()">Valider</button>
+			</form>
+			<div class="resultat3" id="resultat3"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">4-Complétez: ____ you speak English?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer4" value="m">Does</label><br>
+					<label><input type="radio" name="answer4" value="n">Do</label><br>
+					<label><input type="radio" name="answer4" value="o">Did</label><br>
+					<label><input type="radio" name="answer4" value="p">Doing</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse4()">Valider</button>
+			</form>
+			<div class="resultat4" id="resultat4"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">5-Comment former une question négative?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer5" value="q">Do not you like football?</label><br>
+					<label><input type="radio" name="answer5" value="r">Don't you like football?</label><br>
+					<label><input type="radio" name="answer5" value="s">You don't like football?</label><br>
+					<label><input type="radio" name="answer5" value="t">Do you not like football?</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse5()">Valider</button>
+			</form>
+			<div class="resultat5" id="resultat5"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">6-Comment dire "Il ne joue pas au football" ?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer6" value="u">He don't play football.</label><br>
+					<label><input type="radio" name="answer6" value="v">He doesn't play football.</label><br>
+					<label><input type="radio" name="answer6" value="w">He didn't play football.</label><br>
+					<label><input type="radio" name="answer6" value="x">He does play football.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse6()">Valider</button>
+			</form>
+			<div class="resultat6" id="resultat6"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">7-Complétez: ___ she have a cat?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer7" value="aa">Do</label><br>
+					<label><input type="radio" name="answer7" value="ab">Does</label><br>
+					<label><input type="radio" name="answer7" value="ac">Did</label><br>
+					<label><input type="radio" name="answer7" value="ad">Doing</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse7()">Valider</button>
+			</form>
+			<div class="resultat7" id="resultat7"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">8-Pourquoi utilise-t-on l'auxiliaire 'do' dans les phrases au présent simple en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer8" value="ae">Parce que tous les verbes anglais en ont besoin.</label><br>
+					<label><input type="radio" name="answer8" value="af">Parce qu'il sert à construire les questions et les phrases négatives au présent simple.</label><br>
+					<label><input type="radio" name="answer8" value="ag">Parce qu'il remplace le verbe principal dans la phrase.</label><br>
+					<label><input type="radio" name="answer8" value="ah">Parce qu'il marque le futur dans la question.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse8()">Valider</button>
+			</form>
+			<div class="resultat8" id="resultat8"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">9-Quelle est la bonne forme de question pour: "He eats breakfast at 7 a.m.?"</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer9" value="ai">Does he eats breakfast at 7 a.m.?</label><br>
+					<label><input type="radio" name="answer9" value="aj">Do he eats breakfast at 7 a.m.?</label><br>
+					<label><input type="radio" name="answer9" value="ak">Does he eat breakfast at 7 a.m.?</label><br>
+					<label><input type="radio" name="answer9" value="al">He does eat breakfast at 7 a.m.?</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse9()">Valider</button>
+			</form>
+			<div class="resultat9" id="resultat9"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Coche une seule réponse et valide</h2>
+			<div class="question">10-Quelle est la phrase négative correcte au présent avec l'auxiliaire "do"?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer10" value="am">I don't like pizza.</label><br>
+					<label><input type="radio" name="answer10" value="an">I not like pizza.</label><br>
+					<label><input type="radio" name="answer10" value="ao">I doesn't like pizza.</label><br>
+					<label><input type="radio" name="answer10" value="ap">I do likes pizza.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse10()">Valider</button>
+			</form>
+			<div class="resultat10" id="resultat10"></div>
+		</div>
+		<script src="QcmSimple.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
