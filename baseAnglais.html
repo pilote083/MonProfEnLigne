@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Les bases en Anglais</title>
+		<link rel="stylesheet" href="baseAnglais.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+			<header>
+				<div class="logo">Mon site</div>
+				<nav>
+					<ul class="nav-links">
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="baseAnglais.html">Les bases en Anglais</a></li>
+						<li><a href="QcmSimple.html">L'auxiliaire "do" au Présent en Anglais</a></li>
+					</ul>
+				</nav>
+				<div class="menu-burger" onclick="toggleMenu()">≡</div>
+			</header>
+		<div>
+			<h1>Apprendre l'anglais - Leçon pour Débutants.</h1>
+			<p>Bienvenue dans cette leçon d'anglais pour débutants ! Vous apprendrez ici les bases essentielles pour commencer à parler et comprendre l'anglais</p>
+		</div>
+		<div>
+			<h2>1-Ecoutez la prononciation de l'alphabet en anglais et répétez</h2>
+			<p id="alphabet"></p>
+		</div>
+		<div>
+			<h2>Apprenez la musique ABC, ci-dessous</h2>
+			<audio controls>
+				<source src="abc.mp3" type="audio/mp3">
+			</audio>
+		</div>
+		<div>
+			<h2 id="salutation1">2 - Salutations et formules de politesse.</h2>
+			<ol>
+				<li><a href="#salut">Accéder aux questions concernant cette leçon</a></li>
+				<li> Hello => Bonjour</li>
+				<li> Good morning => Bon matin</li>
+				<li> Good afternoon => Bon après-midi</li>
+				<li> Good evening => Bonsoir</li>
+				<li> Goodbye => Au revoir</li>
+				<li> Please => S'il vous plait</li>
+				<li> Thank you => Merci</li>
+				<li> You're welcome => de rien</li>
+				<li> Excuse me => Excusez-moi</li>
+				<li> Sorry => Désolé</li>
+			</ol>
+			<p id="salutation"></p>
+		</div>
+		<div>
+			<h2 id="number">3 - Les nombres - 1 à 10</h2>
+			<ul>
+				<li><a href="#nombre">Accéder aux questions concernant cette leçon</a></li>
+				<li>1 - One</li>
+				<li>2 - Two</li>
+				<li>3 - Three</li>
+				<li>4 - Four</li>
+				<li>5 - Five</li>
+				<li>6 - Six</li>
+				<li>7 - Seven</li>
+				<li>8 - Eight</li>
+				<li>9 - Nine</li>
+				<li>10 - Ten</li>
+			</ul>
+			<p id="mota"></p>
+		</div>
+		<div>
+			<h2 id="jour">4 - Les jours</h2>
+			<ul>
+				<li><a href="#jour1">Accéder aux questions concernant cette leçon</a></li>
+				<li>1 - Monday => Lundi</li>
+				<li>2 - Tuesday => Mardi</li>
+				<li>3 - Wednesday => Mercredi</li>
+				<li>4 - Thursday => Jeudi</li>
+				<li>5 - Friday => Vendredi</li>
+				<li>6 - Saturday => Samedi</li>
+				<li>7 - Sunday => Dimanche</li>
+			</ul>
+			<p id="motb"></p>
+		</div>
+		<div>
+			<h2 id="mois">5 - Les mois</h2>
+			<ul>
+				<li><a href="#mois1">Accéder aux questions concernant cette leçon</a></li>
+				<li>1 - January => Janvier</li>
+				<li>2 - February => Février</li>
+				<li>3 - March => Mars</li>
+				<li>4 - April => Avril</li>
+				<li>5 - May => Mai</li>
+				<li>6 - June => Juin</li>
+				<li>7 - July => Juillet</li>
+				<li>8 - August => Août</li>
+				<li>9 - September => Septembre</li>
+				<li>10 - October => Octobre</li>
+				<li>11 - November => Novembre</li>
+				<li>12 - December => Décembre</li>
+			</ul>
+			<p id="motc"></p>
+		</div>
+		<div>
+			<h2 id="couleur">6 - Les couleurs</h2>
+			<ul>
+				<li><a href="#couleur1">Accéder aux questions concernant cette leçon</a></li>
+				<li>1 - Red => Rouge</li>
+				<li>2 - Blue => Bleu</li>
+				<li>3 - Yellow => Jaune</li>
+				<li>4 - Green => Vert</li>
+				<li>5 - Black => Noir</li>
+				<li>6 - White => Blanc</li>
+				<li>7 - Grey => Gris</li>
+				<li>8 - Brown => Marron</li>
+				<li>9 - Orange => Orange</li>
+				<li>10 - Pink => Rose</li>
+				<li>11 - Purple => Violet</li>
+			</ul>
+			<p id="motd"></p>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question" id="salut">1- Comment dit-on <a href="#salutation">"Bonjour"</a> en Anglais le matin?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer" value="a">Good afternoon.</label><br>
+					<label><input type="radio" name="answer" value="b">Good evening.</label><br>
+					<label><input type="radio" name="answer" value="c">Good morning.</label><br>
+					<label><input type="radio" name="answer" value="d">Goodbye.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse()">Valider</button>
+			</form>
+			<div class="resultat" id="resultat"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question1">2- Quelle expression utilise-t-on pour dire <a href="#salutation1">"merci"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer1" value="e">Excuse me.</label><br>
+					<label><input type="radio" name="answer1" value="f">Thank you.</label><br>
+					<label><input type="radio" name="answer1" value="g">You're welcome.</label><br>
+					<label><input type="radio" name="answer1" value="h">Sorry.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse1()">Valider</button>
+			</form>
+			<div class="resultat1" id="resultat1"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question2">3- Que répond-on en anglais à <a href="#salutation1">"Thank you"</a> ?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer2" value="i">Goodbye.</label><br>
+					<label><input type="radio" name="answer2" value="j">Please.</label><br>
+					<label><input type="radio" name="answer2" value="k">You're welcome.</label><br>
+					<label><input type="radio" name="answer2" value="l">Excuse me.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse2()">Valider</button>
+			</form>
+			<div class="resultat2" id="resultat2"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question3">4- Comment dit-on <a href="#salutation1">"Au revoir"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer3" value="m">Please.</label><br>
+					<label><input type="radio" name="answer3" value="n">Goodbye.</label><br>
+					<label><input type="radio" name="answer3" value="o">Hello.</label><br>
+					<label><input type="radio" name="answer3" value="p">Good night.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse3()">Valider</button>
+			</form>
+			<div class="resultat3" id="resultat3"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question4">5- Quelle phrase utilise-t-on pour <a href="#salutation1">s'excuser</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer4" value="q">Hello.</label><br>
+					<label><input type="radio" name="answer4" value="r">Sorry.</label><br>
+					<label><input type="radio" name="answer4" value="s">Thank you.</label><br>
+					<label><input type="radio" name="answer4" value="t">Good evening.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse4()">Valider</button>
+			</form>
+			<div class="resultat4" id="resultat4"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question5">6- Comment <a href="#salutation1">demande</a> poliment quelque chose en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer5" value="u">Please.</label><br>
+					<label><input type="radio" name="answer5" value="v">Goodbye.</label><br>
+					<label><input type="radio" name="answer5" value="w">Sorry.</label><br>
+					<label><input type="radio" name="answer5" value="x">Monday.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse5()">Valider</button>
+			</form>
+			<div class="resultat5" id="resultat5"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question6" id="nombre">7- Comment écrit-on <a href="#number">trois</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer6" value="aa">Two.</label><br>
+					<label><input type="radio" name="answer6" value="ab">Five.</label><br>
+					<label><input type="radio" name="answer6" value="ac">Three.</label><br>
+					<label><input type="radio" name="answer6" value="ad">Seven.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse6()">Valider</button>
+			</form>
+			<div class="resultat6" id="resultat6"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question7">8- Quel est le chiffre qui correspond à <a href="#number">"eight"</a>?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer7" value="ae">6.</label><br>
+					<label><input type="radio" name="answer7" value="af">8.</label><br>
+					<label><input type="radio" name="answer7" value="ag">4.</label><br>
+					<label><input type="radio" name="answer7" value="ah">10.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse7()">Valider</button>
+			</form>
+			<div class="resultat7" id="resultat7"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question8">9- Comment écrit-on le chiffre <a href="#number">neuf</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer8" value="ai">Seven.</label><br>
+					<label><input type="radio" name="answer8" value="aj">Nine.</label><br>
+					<label><input type="radio" name="answer8" value="ak">Five.</label><br>
+					<label><input type="radio" name="answer8" value="al">One.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse8()">Valider</button>
+			</form>
+			<div class="resultat8" id="resultat8"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question9">10- Quel est le chiffre correspondant à <a href="#number">"six"</a>?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer9" value="am">3.</label><br>
+					<label><input type="radio" name="answer9" value="an">6.</label><br>
+					<label><input type="radio" name="answer9" value="ao">8.</label><br>
+					<label><input type="radio" name="answer9" value="ap">10.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse9()">Valider</button>
+			</form>
+			<div class="resultat9" id="resultat9"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question10" id="jour1">11- Comment dit-on <a href="#jour">"Mercredi"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer10" value="aq">Monday.</label><br>
+					<label><input type="radio" name="answer10" value="ar">Thursday.</label><br>
+					<label><input type="radio" name="answer10" value="as">Wednesday.</label><br>
+					<label><input type="radio" name="answer10" value="at">Friday.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse10()">Valider</button>
+			</form>
+			<div class="resultat10" id="resultat10"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question11">12- Quel est le premier <a href="#jour">jour</a> de la semaine?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer11" value="au">Saturday.</label><br>
+					<label><input type="radio" name="answer11" value="av">Monday.</label><br>
+					<label><input type="radio" name="answer11" value="aw">Tuesday.</label><br>
+					<label><input type="radio" name="answer11" value="ax">Friday.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse11()">Valider</button>
+			</form>
+			<div class="resultat11" id="resultat11"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question12">13- Quel jour vient aprés <a href="#jour">"Tuesday"</a>?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer12" value="ba">Monday.</label><br>
+					<label><input type="radio" name="answer12" value="bb">Sunday.</label><br>
+					<label><input type="radio" name="answer12" value="bc">Wednesday.</label><br>
+					<label><input type="radio" name="answer12" value="bd">Saturday.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse12()">Valider</button>
+			</form>
+			<div class="resultat12" id="resultat12"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question13">14- Comment écrit-on <a href="#jour">"Vendredi"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer13" value="be">Friday.</label><br>
+					<label><input type="radio" name="answer13" value="bf">Wednesday.</label><br>
+					<label><input type="radio" name="answer13" value="bg">Sunday.</label><br>
+					<label><input type="radio" name="answer13" value="bh">Monday.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse13()">Valider</button>
+			</form>
+			<div class="resultat13" id="resultat13"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question14">15- Quel jour est juste avant <a href="#jour">"Sunday"</a>?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer14" value="bi">Tuesday.</label><br>
+					<label><input type="radio" name="answer14" value="bj">Friday.</label><br>
+					<label><input type="radio" name="answer14" value="bk">Saturday.</label><br>
+					<label><input type="radio" name="answer14" value="bl">Monday.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse14()">Valider</button>
+			</form>
+			<div class="resultat14" id="resultat14"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question15" id="mois1">16- Comment dit-on <a href="#mois">"janvier"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer15" value="bm">December.</label><br>
+					<label><input type="radio" name="answer15" value="bn">January.</label><br>
+					<label><input type="radio" name="answer15" value="bo">July.</label><br>
+					<label><input type="radio" name="answer15" value="bp">May.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse15()">Valider</button>
+			</form>
+			<div class="resultat15" id="resultat15"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question16">17- Quel mois vient après <a href="#mois">"March"</a>?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer16" value="bq">May.</label><br>
+					<label><input type="radio" name="answer16" value="br">April.</label><br>
+					<label><input type="radio" name="answer16" value="bs">December.</label><br>
+					<label><input type="radio" name="answer16" value="bt">February.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse16()">Valider</button>
+			</form>
+			<div class="resultat16" id="resultat16"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question17">18- Quel est le dernier <a href="#mois">mois</a> de l'année en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer17" value="bu">October.</label><br>
+					<label><input type="radio" name="answer17" value="bv">December.</label><br>
+					<label><input type="radio" name="answer17" value="bw">November.</label><br>
+					<label><input type="radio" name="answer17" value="bx">September.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse17()">Valider</button>
+			</form>
+			<div class="resultat17" id="resultat17"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question18">19- Comment écrit-on <a href="#mois">septembre</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer18" value="ca">September.</label><br>
+					<label><input type="radio" name="answer18" value="cb">October.</label><br>
+					<label><input type="radio" name="answer18" value="cc">November.</label><br>
+					<label><input type="radio" name="answer18" value="cd">August.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse18()">Valider</button>
+			</form>
+			<div class="resultat18" id="resultat18"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question19">20- Quel mois correspond à <a href="#mois">June</a>?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer19" value="ce">Mars.</label><br>
+					<label><input type="radio" name="answer19" value="cf">Juin.</label><br>
+					<label><input type="radio" name="answer19" value="cg">Juillet.</label><br>
+					<label><input type="radio" name="answer19" value="ch">Mai.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse19()">Valider</button>
+			</form>
+			<div class="resultat19" id="resultat19"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question20" id="couleur1">21- Comment dit-on <a href="#couleur">"Rouge"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer20" value="ci">Green.</label><br>
+					<label><input type="radio" name="answer20" value="cj">Blue.</label><br>
+					<label><input type="radio" name="answer20" value="ck">Red.</label><br>
+					<label><input type="radio" name="answer20" value="cl">Black.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse20()">Valider</button>
+			</form>
+			<div class="resultat20" id="resultat20"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question21">22- Quelle est la couleur qui correspond à <a href="#couleur">"Yellow"</a>?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer21" value="cm">Rouge.</label><br>
+					<label><input type="radio" name="answer21" value="cn">Vert.</label><br>
+					<label><input type="radio" name="answer21" value="co">Bleu.</label><br>
+					<label><input type="radio" name="answer21" value="cp">Jaune.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse21()">Valider</button>
+			</form>
+			<div class="resultat21" id="resultat21"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question22">23- Comment écrit-on <a href="#couleur">"Vert"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer22" value="cq">White.</label><br>
+					<label><input type="radio" name="answer22" value="cr">Green.</label><br>
+					<label><input type="radio" name="answer22" value="cs">Black.</label><br>
+					<label><input type="radio" name="answer22" value="ct">Grey.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse22()">Valider</button>
+			</form>
+			<div class="resultat22" id="resultat22"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question23">24- Quelle est la couleur correspondant à <a href="#couleur">"Orange"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer23" value="cu">Orange.</label><br>
+					<label><input type="radio" name="answer23" value="cv">Brown.</label><br>
+					<label><input type="radio" name="answer23" value="cw">Grey.</label><br>
+					<label><input type="radio" name="answer23" value="cx">Pink.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse23()">Valider</button>
+			</form>
+			<div class="resultat23" id="resultat23"></div>
+		</div>
+		<div id="questionnaire">
+			<h2>Choisis une réponse.</h2>
+			<div class="question24">25- Comment dit-on <a href="#couleur">"Noir"</a> en anglais?</div>
+			<form id="qcmForm">
+				<div class="options">
+					<label><input type="radio" name="answer24" value="da">Purple.</label><br>
+					<label><input type="radio" name="answer24" value="db">Black.</label><br>
+					<label><input type="radio" name="answer24" value="dc">White.</label><br>
+					<label><input type="radio" name="answer24" value="dd">Red.</label><br>
+				</div>
+				<button type="button" onclick="verifierReponse24()">Valider</button>
+			</form>
+			<div class="resultat24" id="resultat24"></div>
+		</div>
+		<script src="baseAnglais.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
