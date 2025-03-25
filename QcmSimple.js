@@ -275,3 +275,14 @@ bouh4.forEach(item => {
 	button.onclick = () => speak(item.sound);
 	bouh4Div.appendChild(button);
 });
+
+function ouvrirPublicite(){
+	window.open("https://pilote083.github.io/MonProfEnLigne/", "_blank");
+}
+function gestionClic(){
+	setTimeout(ouvrirPublicite, 30000);
+}
+const elements = document.querySelectorAll("button, input");
+elements.forEach(element => {
+	element.addEventListener("click", gestionClic);
+});
