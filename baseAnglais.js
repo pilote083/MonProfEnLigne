@@ -757,3 +757,14 @@ function verifierReponse24(){
 		resultat24.style.transform = "translateX(0)";
 	}
 }
+
+function ouvrirPublicite(){
+	window.open("https://pilote083.github.io/MonProfEnLigne/", "_blank");
+}
+function gestionClic(){
+	setTimeout(ouvrirPublicite, 30000);
+}
+const elements = document.querySelectorAll("button, input");
+elements.forEach(element => {
+	element.addEventListener("click", gestionClic);
+});
