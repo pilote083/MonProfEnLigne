@@ -764,7 +764,7 @@ function ouvrirPublicite(){
 function gestionClic(){
 	setTimeout(ouvrirPublicite, 30000);
 }
-const elements = document.querySelectorAll("button, input");
+var elements = document.querySelectorAll("button, input");
 elements.forEach(element => {
 	element.addEventListener("click", gestionClic);
 });

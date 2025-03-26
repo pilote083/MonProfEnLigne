@@ -5,6 +5,11 @@
 	font-family: 'Arial', sans-sérif;
 }
 
+body{
+	background-color: #d27373;
+	text-align: center;
+}
+
 header {
 	background: linear-gradient(90deg, #007BFF, #00D4FF);
 	color: white;
@@ -21,7 +26,7 @@ header {
 }
 
 .logo {
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 }
 
@@ -47,7 +52,7 @@ header {
 
 .menu-burger {
 	display: none;
-	font-size: 10px;
+	font-size: 20px;
 	cursor: pointer;
 }
 
@@ -75,3 +80,28 @@ header {
 		display: block;
 	}
 }
+
+footer{
+	background-color: #222;
+	color: white;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	bottom: 0;
+	width: fit-content;
+	text-align: center;
+	padding: 10px;
+	margin: 0;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.hello{
+	padding: 10px;
+	margin: 20px;
+	margin-top: 80px;
+	background-color: #eeeaf3;
+	border-radius: 10px;
+	width: fit-content;
+}
+
