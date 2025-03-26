@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les dates en anglais</title>
+    <link rel="stylesheet" href="date.css">
+</head>
+<body>
+    <header id="accueil">
+        <div id="logo">Menu =========></div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="baseAnglais.html">Les bases en Anglais</a></li>
+                <li><a href="QcmSimple.html">L'auxiliaire "do" au Présent en Anglais</a></li>
+                <li><a href="date.html">La date en Anglais</a></li>
+            </ul>
+        <div id="menu-burger" onclick="toggleMenu()">≡</div>
+        </nav>
+    </header>
+    <div id="lesson">
+        <h1>Ecrire les Dates en Anglais</h1>
+        <p>Apprenez à écrire les dates en Anglais, étape par étape.</p>
+    </div>
+    <section id="lesson">
+        <div class="step">
+            <h2>1. Introduction aux dates</h2>
+            <p>En anglais, les dates sont écrites en suivant un format particulier :</p>
+            <ul>
+                <li>Le mois vient avant le jour et l'année.</li>
+                <li>Les jours de la semaine sont aussi importants dans certains contextes.</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h2>2. Format de base: Mois, Jour, Année</h2>
+            <p>Voici un exemple: <strong>March 26, 2025</strong></p>
+            <p>Notez que le mois est écrit en toutes lettres et l'année suit le jour.</p>
+        </div>
+        <div class="step">
+            <h2>3. Utilisation des numéros d'ordre pour les jours</h2>
+            <p>En anglais, les jours du mois peuvent être écrits avec un suffixe ordinal, comme "1st", "2nd", "3rd", etc.</p>
+            <p>Exemples : <strong>March 1st</strong>, <strong>March 2nd</strong>, <strong>March 3rd</strong>.</p>
+        </div>
+        <div class="step">
+            <h2>4. Les mois de l'année</h2>
+            <p>Voici les mois en anglais :</p>
+            <ul>
+                <li>January, February, March, April, May, June, July, August, September, October, November, December</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h2>5: Exercices pratiques</h2>
+            <p>Utiliser le formulaire ci-dessous pour essayer d'écrire des dates en Anglais :</p>
+            <form id="date-form">
+                <label for="day">Jour :</label>
+                <input type="number" id="day" name="day" min="1" max="31" required>
+                <label for="month">Mois :</label>
+                <input type="text" id="month" name="month" required placeholder="Mois" list="months-list">
+                <datalist id="months-list">
+                    <option value="January">
+                    <option value="February">
+                    <option value="March">
+                    <option value="April">
+                    <option value="May">
+                    <option value="June">
+                    <option value="July">
+                    <option value="August">
+                    <option value="September">
+                    <option value="October">
+                    <option value="November">
+                    <option value="December">
+                </datalist>
+                <label for="year">Année :</label>
+                <input type="number" id="year" name="year" required placeholder="Année" min="2000" max="2099">
+                <button type="submit">Soumettre</button>
+                <div id="result"></div>
+            </form>
+        </div>
+    </section>
+    <script src="date.js"></script>
+</body>
+</html>
