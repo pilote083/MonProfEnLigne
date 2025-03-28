@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #d4bdbd;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column; 
+}
+
+#numbers1{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transform: translate(0%, 0%);
+}
+
+#pour{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))) translateY(-150px) rotate(calc(-30deg * var(--i)));
+    inset: 170px;
+    text-align: center;
+    margin: auto;
+}
+
+#clock{
+   background: white;
+   border: 5px solid white;
+   border-radius: 50%;
+}
+
+#wrap{
+    width: 350px;
+    height: 350px;
+    position: relative;
+}
+
+#minute, #hour{
+    position: absolute;
+    width: 100px;
+    height: 6px;
+    background: black;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom center;
+    transform: rotate(0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+
+#minute{
+   position: absolute;
+   width: 130px;
+   height: 4px;
+   top: 0;
+   left: 0;
+   right: 0;
+   transform: rotate(90deg);
+}
+
+#second{
+    position: absolute;
+    width: 90px;
+    height: 2px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: red;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+}
+
+#center-dot{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #1b1b1b;
+    border-radius: 50%;
+}
+
+#written-time {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
