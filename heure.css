@@ -32,9 +32,12 @@ body{
 }
 
 #clock{
-   background: white;
-   border: 5px solid white;
+    position: relative;
+   background: rgb(71, 100, 243);
    border-radius: 50%;
+   box-shadow: 0px 0px 8px rgb(60, 35, 35);
+   color: rgb(68, 240, 80);
+   border: 15px solid rgb(71, 68, 234);
 }
 
 #wrap{
@@ -43,43 +46,54 @@ body{
     position: relative;
 }
 
-#minute, #hour{
+#hour{
+    border-radius: 30px;
     position: absolute;
-    width: 100px;
-    height: 6px;
-    background: black;
+    height: 100px;
+    width: 10px;
+    background: rgb(79, 76, 233);
     margin: auto;
     top: 0;
     left: 0;
-    bottom: 0;
+    bottom: 29%;
     right: 0;
     transform-origin: bottom center;
-    transform: rotate(0);
+    transform: rotate(90deg);
     box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    z-index: 3;
+    box-shadow: rgb(79, 76, 233);
 }
 
 #minute{
    position: absolute;
-   width: 130px;
-   height: 4px;
-   top: 0;
-   left: 0;
+   border-radius: 30px;
+   height: 150px;
+   width: 6px;
+   background:rgb(79, 76, 233);
+   top: 6.5%;
+   left: 49%;
+   bottom: 0;
    right: 0;
+   transform-origin: bottom center;
    transform: rotate(90deg);
+   z-index: 2;
+   box-shadow: rgb(79, 76, 233);
 }
 
 #second{
     position: absolute;
-    width: 90px;
-    height: 2px;
-    margin: auto;
-    left: 0;
-    right: 0;
+    border-radius: 30px;
+    width: 4px;
+    height: 150px;
+    top: 7%;
+    left: 49.5%;
     bottom: 0;
-    top: 0;
-    background: red;
+    right: 0;
+    background: rgb(79, 76, 233);
     transform-origin: bottom center;
-    transform: rotate(180deg);
+    transform: rotate(90deg);
+    z-index: 1;
+    box-shadow: rgb(79, 76, 233);
 }
 
 #center-dot{
@@ -89,11 +103,12 @@ body{
     left: 0;
     bottom: 0;
     right: 0;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border: 2px solid #1b1b1b;
+    width: 10px;
+    height: 10px;
+    background: rgb(79, 76, 233);
+    box-shadow: rgb(79, 76, 233);
     border-radius: 50%;
+    z-index: 10;
 }
 
 #written-time {
