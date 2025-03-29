@@ -7,29 +7,214 @@
     <link rel="stylesheet" href="heure.css">
 </head>
 <body>
+    <section>
+        <h1>Savoir dire l'heure en Anglais</h1>
+        <p>
+            <strong>What time is it ?</strong><br>
+            S'il y a bien une connaissance de base à Savoir en Anglais, c'est bien de donner l'heure.<br>
+            Imaginez-vous manquez un rendez-vous parce que vous n'avez pas compris à quelle heure il était.<br>
+            Cela se fait cruellement sentir en voyage lorsque l'on ne maîtrise pas <strong>l'heure en Anglais.</strong>
+        </p>
+    </section>
+    <section>
+        <h2>Comment donner l'heure en Anglais</h2>
+        <p>
+            Dans les pays anglo-saxons, l'heure se donne au format <strong>12h</strong>.<br>
+            C'est à dire que l'on distingue le <strong>matin</strong> de l'<strong>après-midi</strong> grâce aux <strong>AM et PM</strong>.<br>
+            Ils viennent des locutions <strong>"ante meridiem" et "post meridiem"</strong> littéralement <strong>"avant midi" et "après midi"</strong>.
+        </p>
+    </section>
+    <section>
+        <h2>"Past" et "To"</h2>
+        <p>
+            En anglais, on utilise <strong>"past" et "to"</strong> pour dire l'heure quand on parle des minutes.<br>
+            <strong>"Past" </strong>signifie <strong>après</strong> l'heure, on l'utilise de <strong>1 à 30 minutes</strong>. Exemple: "Twenty past five" pour 5h20 (20 minutes après 5h).<br>
+            <strong>"To" </strong>signifie <strong>avant</strong> l'heure, on l'utilise de <strong>31 à 59 minutes</strong>. Exemple: "Twenty to six" pour 5h40 (20 minute avant 6h).<br>
+        </p>
+    </section>
+    <section>
+        <h2>"Half past" et "quarter past et quarter to"</h2>
+        <p>
+           <strong>"Half past"</strong> pour dire <strong>30 minutes après</strong> l'heure. Exemple: "Half past four" = 4H30.<br>
+           <strong>"Quarter past"</strong> pour dire <strong>15 minutes après</strong> l'heure. Exemple: "Quarter past five" = 5h15.<br>
+           <strong>"Quarter to"</strong> pour dire <strong>15 minutes avant</strong> l'heure. Exemple: "Quarter to five" = 4H45.  
+        </p>
+    </section>
+    <section>
+        <h2>A retenir:</h2>
+        <p>
+            <mark>.De 1 à 30 minutes => on dit "past".</mark><br>
+            <mark>.De 31 à 59 minutes => on dit "to".</mark><br>
+            <mark>."Quarter past" => 15 minutes après.</mark><br>
+            <mark>."Quarter to" => 15 minutes avant.</mark><br>
+            <mark>."Half past" => 30 minutes après.</mark><br>
+            <mark>.On utilise "o'clock" pour l'heure pile uniquement</mark><br>
+            <mark>.Noon => midi. Midnight => minuit.</mark>
+        </p>
+    </section>
     <div id="clock">
         <div id="wrap">
-            <div id="hour" class="bidon"></div>
-            <div id="minute" class="bidon"></div>
-            <div id ="second" class="bidon"></div>
+            <div id="hour" class="bidon" title="Hour"></div>
+            <div id="minute" class="bidon" title="Minute"></div>
+            <div id ="second" class="bidon" title="Second"></div>
             <div id="center-dot"></div>
             <div id="numbers1">
-                <span id="pour" style="--i:1"><bold>1</bold></span>
-                <span id="pour" style="--i:2"><bold>2</bold></span>
-                <span id="pour" style="--i:3"><bold>3</bold></span>
-                <span id="pour" style="--i:4"><bold>4</bold></span>
-                <span id="pour" style="--i:5"><bold>5</bold></span>
-                <span id="pour" style="--i:6"><bold>6</bold></span>
-                <span id="pour" style="--i:7"><bold>7</bold></span>
-                <span id="pour" style="--i:8"><bold>8</bold></span>
-                <span id="pour" style="--i:9"><bold>9</bold></span>
-                <span id="pour" style="--i:10"><bold>10</bold></span>
-                <span id="pour" style="--i:11"><bold>11</bold></span>
-                <span id="pour" style="--i:12"><bold>13</bold></span>
+                <span id="pour" style="--i:1"><strong>1</strong></span>
+                <span id="pour" style="--i:2"><strong>2</strong></span>
+                <span id="pour" style="--i:3"><strong>3</strong></span>
+                <span id="pour" style="--i:4"><strong>4</strong></span>
+                <span id="pour" style="--i:5"><strong>5</strong></span>
+                <span id="pour" style="--i:6"><strong>6</strong></span>
+                <span id="pour" style="--i:7"><strong>7</strong></span>
+                <span id="pour" style="--i:8"><strong>8</strong></span>
+                <span id="pour" style="--i:9"><strong>9</strong></span>
+                <span id="pour" style="--i:10"><strong>10</strong></span>
+                <span id="pour" style="--i:11"><strong>11</strong></span>
+                <span id="pour" style="--i:12"><strong>12</strong></span>
             </div>
         </div>
     </div>
-    <p id="written-time"></p>    
+    <p id="written-time"></p>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question">1-Quelle heure est-il quand l'horloge indique 3h15?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer" value="a">It's quarter to three</label><br>
+                <label><input type="radio" name="answer" value="b" >It's quarter past three</label><br>
+                <label><input type="radio" name="answer" value="c">It's half past three</label><br>
+                <label><input type="radio" name="answer" value="d">It's three o'clock</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse()">Valider</button>
+        </form>
+        <div class="resultat" id="resultat"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question1">2-Que signifie "half past six"?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer1" value="e">5h30</label><br>
+                <label><input type="radio" name="answer1" value="f" >6h00</label><br>
+                <label><input type="radio" name="answer1" value="g">6h30</label><br>
+                <label><input type="radio" name="answer1" value="h">7h30</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse1()">Valider</button>
+        </form>
+        <div class="resultat1" id="resultat1"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question2">3-Quelle heure est-il quand on dit "quarter to eight"?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer2" value="i">8h15</label><br>
+                <label><input type="radio" name="answer2" value="j" >7h45</label><br>
+                <label><input type="radio" name="answer2" value="k">8h45</label><br>
+                <label><input type="radio" name="answer2" value="l">7h15</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse2()">Valider</button>
+        </form>
+        <div class="resultat2" id="resultat2"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question3">4-Si il est 12h00, comment le dit-on en Anglais?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer3" value="m">It's noon</label><br>
+                <label><input type="radio" name="answer3" value="n" >It's midnight</label><br>
+                <label><input type="radio" name="answer3" value="o">It's twelve past twelve</label><br>
+                <label><input type="radio" name="answer3" value="p">It's half past twelve</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse3()">Valider</button>
+        </form>
+        <div class="resultat3" id="resultat3"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question4">5-Quelle heure est "ten past nine"?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer4" value="q">9h50</label><br>
+                <label><input type="radio" name="answer4" value="r" >8h10</label><br>
+                <label><input type="radio" name="answer4" value="s">9h10</label><br>
+                <label><input type="radio" name="answer4" value="t">10h09</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse4()">Valider</button>
+        </form>
+        <div class="resultat4" id="resultat4"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question5">6-Quelle est la traduction anglaise de 11h45?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer5" value="u">It's quarter past eleven</label><br>
+                <label><input type="radio" name="answer5" value="v" >It's quarter to eleven</label><br>
+                <label><input type="radio" name="answer5" value="w">It's quarter to twelve</label><br>
+                <label><input type="radio" name="answer5" value="x">It's eleven thirty</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse5()">Valider</button>
+        </form>
+        <div class="resultat5" id="resultat5"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question6">7-Si il est 5h30, comment le dit-on en Anglais?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer6" value="aa">It's half past five</label><br>
+                <label><input type="radio" name="answer6" value="ab" >It's five thirty-five</label><br>
+                <label><input type="radio" name="answer6" value="ac">It's five past thirty</label><br>
+                <label><input type="radio" name="answer6" value="ad">It's half to six</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse6()">Valider</button>
+        </form>
+        <div class="resultat6" id="resultat6"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question7">8-Quelle heure est "twenty to four"?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer7" value="ae">4h20</label><br>
+                <label><input type="radio" name="answer7" value="af" >3h20</label><br>
+                <label><input type="radio" name="answer7" value="ag">3h40</label><br>
+                <label><input type="radio" name="answer7" value="ah">4h40</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse7()">Valider</button>
+        </form>
+        <div class="resultat7" id="resultat7"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question8">9-Que signifie "ten to one" PM?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer8" value="ai">1h10</label><br>
+                <label><input type="radio" name="answer8" value="aj" >12h10</label><br>
+                <label><input type="radio" name="answer8" value="ak">12h50</label><br>
+                <label><input type="radio" name="answer8" value="al">1h50</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse8()">Valider</button>
+        </form>
+        <div class="resultat8" id="resultat8"></div>
+    </section>
+    <section id="questionnaire">
+        <h2>Coche une seule réponse et valide</h2>
+        <div class="question9">10-Quelle est la traduction anglaise de 7h00?</div>
+        <form id="qcmForm">
+            <div class="options">
+                <label><input type="radio" name="answer9" value="am">It's seven to zero</label><br>
+                <label><input type="radio" name="answer9" value="an" >It's seven o'clock</label><br>
+                <label><input type="radio" name="answer9" value="ao">It's seven and zero</label><br>
+                <label><input type="radio" name="answer9" value="ap">It's half past seven</label><br>
+            </div>
+            <button type="button" onclick="verifierReponse9()">Valider</button>
+        </form>
+        <div class="resultat9" id="resultat9"></div>
+    </section>
     <script src="heure.js"></script>
 </body>
 </html>
