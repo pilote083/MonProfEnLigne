@@ -26,8 +26,8 @@ document.getElementById("date-form").addEventListener("submit", function(event){
 });
 
 function toggleMenu(){
-	let menu = document.querySelector("#nav-links");
-	let burger = document.querySelector("#menu-burger");
+	let menu = document.querySelector(".nav-links");
+	let burger = document.querySelector(".menu-burger");
 	menu.classList.toggle("active");
 	burger.classList.toggle("active");
 }
