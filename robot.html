@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnage 3D Interactif</title>
+    <style>
+        .logo {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+}
+
+.nav-links li {
+	margin: 0 15px;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	transition: 0.3s;
+}
+
+.nav-links a:hover {
+	color: #FFD700;
+}
+
+.menu-burger {
+	display: none;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+@media screen {
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		background: #007BFF;
+		text-align: center;
+	}
+	
+	.nav-links.active {
+		display: flex;
+	}
+	
+	.nav-links li {
+		margin: 15px 0;
+	}
+	
+	.menu-burger {
+		display: block;
+	}
+}
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .character {
+            width: 100px;
+            height: 150px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            position: relative;
+            transform: rotateY(0deg);
+            transition: transform 0.5s;
+        }
+        .eye {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: black;
+            border-radius: 50%;
+            top: 40px;
+        }
+        .eye.left { left: 25px; }
+        .eye.right { right: 25px; }
+        .mouth {
+            position: absolute;
+            width: 40px;
+            height: 10px;
+            background: black;
+            border-radius: 10px;
+            top: 90px;
+            left: 30px;
+        }
+        .chat-box {
+            margin-top: 20px;
+            width: 300px;
+            padding: 10px;
+            border: 1px solid white;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #ffcc00;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header id="accueil">
+        <div class="logo">Menu =========></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="baseAnglais.html">Les bases en Anglais</a></li>
+                <li><a href="nombre.html">Les nombres en Anglais</a></li>
+                <li><a href="QcmSimple.html">L'auxiliaire "do" au Présent en Anglais</a></li>
+                <li><a href="date.html">La date en Anglais</a></li>
+                <li><a href="heure.html">L'heure en anglais</a></li>
+                <li><a href="robot.html">Accueil</a></li>
+            </ul>
+        <div class="menu-burger" onclick="toggleMenu()">≡</div>
+        </nav>
+    </header>
+    <div class="character">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth"></div>
+    </div>
+    <div class="chat-box" id="chatBox">
+        <p id="chatText">Clique sur "Parler" et dis quelque chose !</p>
+        <button onclick="startRecognition()">Parler</button>
+    </div>
+
+    <script>
+        function toggleMenu(){
+	let menu = document.querySelector(".nav-links");
+	let burger = document.querySelector(".menu-burger");
+	menu.classList.toggle("active");
+	burger.classList.toggle("active");
+}
+        function startRecognition() {
+            let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            let chatText = document.getElementById("chatText");
+            let character = document.querySelector(".character");
+
+            recognition.lang = "fr-FR";
+            recognition.start();
+
+            recognition.onresult = function(event) {
+                let transcript = event.results[0][0].transcript;
+                chatText.innerText = "Tu as dit : " + transcript;
+                character.style.transform = "rotateY(" + (Math.random() * 360) + "deg)";
+                speakResponse("Tu as dit : " + transcript);
+            };
+        }
+
+        function speakResponse(text) {
+            let utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "fr-FR";
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
