@@ -277,15 +277,12 @@ bouh4.forEach(item => {
 });
 
 function ouvrirPublicite(){
-	window.open("https://pilote083.github.io/MonProfEnLigne/", "_blank");
-	event.preventDefault();
+	window.open("https://www.clictune.com/krMN", "_blank");
 }
 function gestionClic(){
 	setTimeout(ouvrirPublicite, 30000);
-	event.preventDefault();
 }
 var elements = document.querySelectorAll("button, input");
 elements.forEach(element => {
 	element.addEventListener("click", gestionClic);
-	event.preventDefault();
 });
