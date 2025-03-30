@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #aaaac8;
+    display: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+    text-align: center;
+    background-color: #46d7eb;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    border-radius: 20px;
+    background: rgb(148, 148, 181);
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.numbers-container {
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    font-size: 18px;
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 2px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.translation {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 1s ease, transform 1s ease;
+    will-change: opacity, transform;
+}
+
+.translation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.2); }
+    40% { transform: scale(0.9); }
+    60% { transform: scale(1.1); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+.logo {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+}
+
+.nav-links li {
+	margin: 0 15px;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	transition: 0.3s;
+}
+
+.nav-links a:hover {
+	color: #FFD700;
+}
+
+.menu-burger {
+	display: none;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+@media screen {
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		background: #007BFF;
+		text-align: center;
+	}
+	
+	.nav-links.active {
+		display: flex;
+	}
+	
+	.nav-links li {
+		margin: 15px 0;
+	}
+	
+	.menu-burger {
+		display: block;
+	}
+}
