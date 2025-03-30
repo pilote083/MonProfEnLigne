@@ -32,13 +32,7 @@ function toggleMenu(){
 	burger.classList.toggle("active");
 }
 
-function ouvrirPublicite(){
-	window.open("https://www.clictune.com/krMN", "_blank");
-}
-function gestionClic(){
-	setTimeout(ouvrirPublicite, 30000);
-}
-var elements = document.querySelectorAll("button, input");
-elements.forEach(element => {
-	element.addEventListener("click", gestionClic);
+document.addEventListener("click", function ouvrirPubUneFois(){
+	window.open("https://www.clictune.com/krMR", "_blank");
+	document.removeEventListener("click", ouvrirPubUneFois);
 });
