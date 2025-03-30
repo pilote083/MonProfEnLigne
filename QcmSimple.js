@@ -275,8 +275,3 @@ bouh4.forEach(item => {
 	button.onclick = () => speak(item.sound);
 	bouh4Div.appendChild(button);
 });
-
-document.addEventListener("click", function ouvrirPubUneFois(){
-	window.open("https://www.clictune.com/krMR", "_blank");
-	document.removeEventListener("click", ouvrirPubUneFois);
-});

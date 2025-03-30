@@ -757,8 +757,3 @@ function verifierReponse24(){
 		resultat24.style.transform = "translateX(0)";
 	}
 }
-
-document.addEventListener("click", function ouvrirPubUneFois(){
-	window.open("https://www.clictune.com/krMR", "_blank");
-	document.removeEventListener("click", ouvrirPubUneFois);
-});
