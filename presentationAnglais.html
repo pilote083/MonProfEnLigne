@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Présentez-vous</title>
+   <link rel="stylesheet" href="presentationAnglais.css">
+</head>
+<body>
+   <div class="container">
+       <h2>S'exercer à se présenter</h2>
+       <input type="text" id="name" placeholder="Ton prénom">
+       <input type="number" id="age" placeholder="Ton âge" min="1" max="120">
+       <select id="mood">
+           <option value="happy  (heureux(se))">Happy</option>
+           <option value="sad  (triste)">Sad</option>
+           <option value="excited  (excité(e))">Excited</option>
+           <option value="tired  (fatigué(e))">Tired</option>
+       </select>
+       <button onclick="introduce()">Submit</button>
+       <p id="result"></p>
+       <p id="resultat"></p>
+   </div>
+   <script src="presentationAnglais.js"></script>
+</body>
+</html>
