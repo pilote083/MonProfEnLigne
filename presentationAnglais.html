@@ -7,17 +7,76 @@
    <link rel="stylesheet" href="presentationAnglais.css">
 </head>
 <body>
+    <header id="accueil">
+        <div class="logo">Menu</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="baseAnglais.html">Les bases en Anglais</a></li>
+                <li><a href="nombre.html">Les nombres en Anglais</a></li>
+                <li><a href="QcmSimple.html">L'auxiliaire "do" au Présent en Anglais</a></li>
+                <li><a href="date.html">La date en Anglais</a></li>
+                <li><a href="heure.html">L'heure en anglais</a></li>
+                <li><a href="presentationAnglais.html">Se présenter en Anglais</a></li>
+                <li><a href="robot.html">Robot</a></li>
+            </ul>
+        <div class="menu-burger" onclick="toggleMenu()">≡</div>
+        </nav>
+    </header>
+    <h1>Leçon: Se présenter en Anglais</h1>
+    <div>
+        <h2>1- Saluer et dire son prénom</h2>
+        <p>Lorsqu'on se présente, on commence par une salutation "Hello => Bonjour" ou "Hi => Salut" suivie de son prénom:</p>
+        <ul>
+            <li>Hello, my name is "prénom" => (Bonjour, je m'appelle "prénom".)</li>
+            <li>Hi, I'm "prénom" => (Salut, je suis "prénom".)</li>
+        </ul>
+    </div>
+    <div>
+        <h2>2- Dire son âge</h2>
+        <p>I am "âge" years old. (J'ai "âge" ans.)</p>
+        <p>Exemple: I am twenty years old => (J'ai vingt ans.)</p>
+    </div>
+    <div>
+        <h2>3- Parler de son origine</h2>
+        <p>I am from "Pays ou ville" => (Je viens de "Pays ou ville".)</p>
+        <p>Exemple: I am from France => (Je viens de France.)</p>
+        <p>I was born in "Lieu" in 1995 => (Je suis né(e) à "Lieu" en 1995.)</p>
+        <p>Exemple: I was born in Toulon in 1995 => (Je suis né(e) à Toulon en 1995.)</p>
+    </div>
+    <div>
+        <h2>4- Dire ce que l'on fait (Métier ou études)</h2>
+        <p>I am a "job" => (Je suis (métier).)</p>
+        <p>I work as a "job" => (Je travaille en tant que "métier".)</p>
+        <p>I am a student => (Je suis un(e) étudiant(e).)</p>
+    </div>
+    <div>
+        <h2>5- Parler de ses loisirs et centres d'intérêt</h2>
+        <p>I like/love "hobby" => (J'aime "loisirs".)</p>
+        <p>My hobbies are "hobbies" => (Mes passe-temps sont "loisirs".)</p>
+        <p>Exemples: I love reading and playing football => (J'aime lire et jouer au football.)</p>
+    </div>
+    <div>
+        <h2>Clotûrer la présentation</h2>
+        <p>Nice to meet you! => (Ravi(e) de vous rencontrer!)</p>
+        <p>It's a pleasure to meet you! => (C'est un plaisir de vous rencontrer!)</p>
+    </div>
+    <div>
+        <h2>Exemple de présentation complète</h2>
+        <p>Hello, my name is Sarah.<br>I am 25 years old and I am from Canada.<br>I work as a teacher.<br>I love reading and traveling.<br>Nice to meet you!</p>
+        <p>Traduction:<br>Bonjour, je m'appelle Sarah.<br>J'ai 25 ans et je viens du Canada.<br>Je travaille en tant qu'enseignante.<br>J'aime lire et voyager.<br>Ravi(e) de vous rencontrer!</p>
+    </div>
    <div class="container">
-       <h2>S'exercer à se présenter</h2>
-       <input type="text" id="name" placeholder="Ton prénom">
-       <input type="number" id="age" placeholder="Ton âge" min="1" max="120">
+       <p><h2>S'exercer à se présenter</h2></p>
+       <input type="text" id="name" placeholder="prénom">
+       <input type="number" id="age" placeholder="âge" min="1" max="120">
        <select id="mood">
            <option value="happy  (heureux(se))">Happy</option>
            <option value="sad  (triste)">Sad</option>
            <option value="excited  (excité(e))">Excited</option>
            <option value="tired  (fatigué(e))">Tired</option>
        </select>
-       <button onclick="introduce()">Submit</button>
+       <button onclick="introduce()">Envoyer</button>
        <p id="result"></p>
        <p id="resultat"></p>
    </div>
