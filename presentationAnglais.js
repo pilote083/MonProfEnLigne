@@ -1,16 +1,16 @@
 function introduce() {
-    let name = document.getElementById("name").value;
-    let age = document.getElementById("age").value;
+    let name1 = document.getElementById("name1").value;
+    let age1 = document.getElementById("age1").value;
     let mood = document.getElementById("mood").value;
-    if(name && age  && mood) {
-    let message = `Hello! My name is ${name}. I am ${age} years old and I feel ${mood} today.`;
-    let message1 = `Bonjour! Mon prénom est ${name}. J'ai ${age} ans et je me sens ${mood} aujourd'hui.`;
-    let result = document.getElementById("result");
-    let resultat = document.getElementById("resultat");
-    result.textContent = message;
-    resultat.textContent = message1;
-    result.style.opacity = 1;
-    resultat.style.opacity = 1} else {
+    if(name1 && age1) {
+    let message = `Hello! My name is ${name1}. I am ${age1} years old and I feel ${mood} today.`;
+    let message1 = `Bonjour! Mon prénom est ${name1}. J'ai ${age1} ans et je me sens ${mood} aujourd'hui.`;
+    let result1 = document.getElementById("result1");
+    let resultat1 = document.getElementById("resultat1");
+    result1.textContent = message;
+    resultat1.textContent = message1;
+    result1.style.opacity = 1;
+    resultat1.style.opacity = 1} else {
                alert("Veuillez remplir tous les champs!");
            }
        }
